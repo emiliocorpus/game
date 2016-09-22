@@ -36,7 +36,7 @@ class RootPage extends React.Component {
   	        toBeDisplayed = <SignIn signUp={this.signUp}/>
   	        break;
   	    case "signUp":
-  	        toBeDisplayed = <SignUp signIn={this.signIn}/>
+	        toBeDisplayed = <SignUp signIn={this.signIn}/>
   	        break;
   	    default:
   	        toBeDisplayed = <div className="body-splash">
