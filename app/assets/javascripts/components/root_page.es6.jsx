@@ -29,14 +29,14 @@ class RootPage extends React.Component {
   }
 
   render () {
-  	var toBeDisplayedl
+  	var toBeDisplayed
 
   	switch(this.state.display) {
   	    case "signIn":
-  	        toBeDisplayed = <SignIn />
+  	        toBeDisplayed = <SignIn signUp={this.signUp}/>
   	        break;
   	    case "signUp":
-  	        toBeDisplayed = <SignUp />
+  	        toBeDisplayed = <SignUp signIn={this.signIn}/>
   	        break;
   	    default:
   	        toBeDisplayed = <div className="body-splash">
