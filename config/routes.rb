@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'user/new'
+
+  get 'user/show'
+
   root 'page#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
