@@ -1,10 +1,18 @@
 class SignIn extends React.Component {
+
+  handleLogIn (e) {
+  	e.preventDefault()
+  	debugger
+
+  }
+
+
   render () {
     return (
     	<div className="body-splash">
 
-    		<div className="sign-in-container">
-	    		<form>
+    		<div className="sign-in-up-container sign-in-container">
+	    		<form onSubmit={this.handleLogIn}>
 	    			<div className="form-group">
 	    			    <label htmlFor="username">username:</label>
 	    			    <input type="email" className="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username" />
@@ -15,6 +23,8 @@ class SignIn extends React.Component {
 	    			    <label htmlFor="passwordinput">Password</label>
 	    			    <input type="password" className="form-control" id="passwordinput" placeholder="password" />
 	    			</div>
+
+	    			<button type="submit" className="btn btn-primary">Log In</button>
 
 	    		</form>
     		</div>
