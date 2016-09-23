@@ -64,6 +64,12 @@ class SignUp extends React.Component {
 	    		</form>
     		</div>
 
+        <div>
+
+          <a href="/users/auth/facebook">Sign Up With Facebook Here</a>
+
+        </div>
+
     		<div>
     			<span>
     				<a href="signin" onClick={this.props.signIn}>Already a user? Sign In Here</a>
