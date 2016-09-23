@@ -40,9 +40,15 @@ class RootPage extends React.Component {
   	        break;
   	    default:
   	        toBeDisplayed = <div className="body-splash">
-	  	        	    		<button> P L A Y </button>
-	  	        	    		<a href="sign_in" onClick={this.signIn}>Sign In</a>
-	  	        	    		<a href="sign_up" onClick={this.signUp}>Not A User? Sign Up Here</a>
+	  	        	    		<button type="submit" className="btn btn-success">P L A Y</button>
+
+	  	        	    		<div className="sign-in-up-links-container">
+
+		  	        	    			<a href="sign_in" onClick={this.signIn} className="sign-in-link">Sign In</a>
+		  	        	    			<br/>
+		  	        	    			<a href="sign_up" onClick={this.signUp} className="sign-up-link">Not A User? Sign Up Here</a>
+
+	  	        	    		</div>
   	            			</div>
   	}
 
