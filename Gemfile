@@ -13,6 +13,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 gem 'oauth2'
 gem 'rails_12factor'
 gem "react-rails", "~> 1.8.2"
