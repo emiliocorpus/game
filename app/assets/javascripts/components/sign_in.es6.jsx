@@ -6,7 +6,7 @@ class SignIn extends React.Component {
       url: '/users/create',
       type: 'POST',
       dataType: 'json',
-      data: {email: this.refs.email.value, username: this.refs.username.value, password: this.refs.password.value, confirm_password:this.refs.confirmPassword.value},
+      data: {email: this.refs.email.value, password: this.refs.password.value, confirm_password:this.refs.confirmPassword.value},
     })
     .done(function(response) {
       debugger
@@ -28,8 +28,8 @@ class SignIn extends React.Component {
     		<div className="sign-in-up-container sign-in-container">
 	    		<form onSubmit={this.handleLogIn}>
 	    			<div className="form-group">
-	    			    <label htmlFor="username">username:</label>
-	    			    <input type="email" className="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username" ref="username" />
+	    			    <label htmlFor="username">Email</label>
+	    			    <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" ref="email" />
 	    			 
 				    </div>
 	    			  

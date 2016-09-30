@@ -36,11 +36,6 @@ class SignUp extends React.Component {
 
     		<div className="sign-in-up-container sign-up-container">
 	    		<form onSubmit={this.handleSignUp}>
-	    			<div className="form-group">
-	    			    <label htmlFor="username">username:</label>
-	    			    <input type="text" className="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username" ref="username"/>
-	    			 
-				    </div>
 
 				    <div className="form-group">
 				        <label htmlFor="emailInput">Email address</label>

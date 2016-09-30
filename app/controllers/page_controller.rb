@@ -1,8 +1,7 @@
 class PageController < ApplicationController
   def index
   	if current_user
-  		@user = current_user
-  		redirect_to @user
+  		redirect_to current_user
   	end
   end
 end
