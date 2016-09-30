@@ -1,7 +1,7 @@
 class UserController < ApplicationController
   def create
   	if request.xhr?
-	    new_user = User.new(email:params["email"], username: params["username"], password: params["password"])
+	    new_user = User.new(email:params["email"], password: params["password"])
 	    if new_user.save
 	    	sign_in new_user
 	    	redirect_to root_path
