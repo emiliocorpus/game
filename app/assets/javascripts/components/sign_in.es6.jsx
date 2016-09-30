@@ -2,23 +2,22 @@ class SignIn extends React.Component {
 
   handleLogIn (e) {
   	e.preventDefault()
-  	debugger
-    // $.ajax({
-    //   url: '/users/create',
-    //   type: 'POST',
-    //   dataType: 'json',
-    //   data: {email: this.refs.email.value, username: this.refs.username.value, password: this.refs.password.value, confirm_password:this.refs.confirmPassword.value},
-    // })
-    // .done(function(response) {
-    //   debugger
-    //   console.log("success");
-    // })
-    // .fail(function() {
-    //   console.log("error");
-    // })
-    // .always(function() {
-    //   console.log("complete");
-    // });
+    $.ajax({
+      url: '/users/create',
+      type: 'POST',
+      dataType: 'json',
+      data: {email: this.refs.email.value, username: this.refs.username.value, password: this.refs.password.value, confirm_password:this.refs.confirmPassword.value},
+    })
+    .done(function(response) {
+      debugger
+      console.log("success");
+    })
+    .fail(function() {
+      console.log("error");
+    })
+    .always(function() {
+      console.log("complete");
+    });
   }
 
 
@@ -43,6 +42,10 @@ class SignIn extends React.Component {
 
 	    		</form>
     		</div>
+
+        <div>
+          <a href="/users/auth/facebook">Sign In With Facebook Here</a>
+        </div>
 
     		<div>
     			<span>
