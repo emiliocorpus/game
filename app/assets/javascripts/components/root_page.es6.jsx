@@ -21,22 +21,6 @@ class RootPage extends React.Component {
 
   }
 
-  signInAsGuest (e) {
-  	e.preventDefault
-  	$.ajax({
-  	  url: '/sign_in_as_guest',
-  	  type: 'POST',
-  	})
-  	.done(function(response) {
-  	  console.log("success");
-  	})
-  	.fail(function() {
-  	  console.log("error");
-  	})
-  	.always(function() {
-  	  console.log("complete");
-  	});
-  }
 
   signUp (e) {
   	e.preventDefault()
@@ -63,8 +47,6 @@ class RootPage extends React.Component {
 
 		  	        	    			<a href="sign_in" onClick={this.signIn} className="sign-in-link">Sign In</a>
 		  	        	    			<br/>
-		  	        	    			<a href="/sign_in_as_guest" onClick={this.signInAsGuest}>Sign In As Guest</a>
-	  	        	    			     <br/>	
 		  	        	    			<a href="sign_up" onClick={this.signUp} className="sign-up-link">Not A User? Sign Up Here</a>
 
 	  	        	    		</div>

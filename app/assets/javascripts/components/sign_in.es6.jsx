@@ -20,6 +20,23 @@ class SignIn extends React.Component {
     });
   }
 
+  signInAsGuest (e) {
+    e.preventDefault
+    $.ajax({
+      url: '/sign_in_as_guest',
+      type: 'POST',
+    })
+    .done(function(response) {
+      console.log("success");
+    })
+    .fail(function() {
+      console.log("error");
+    })
+    .always(function() {
+      console.log("complete");
+    });
+  }
+
 
   render () {
     return (
@@ -57,7 +74,7 @@ class SignIn extends React.Component {
 
           <span>
 
-            <a href="/sign_in_as_guest">Sign In As Guest</a>
+            <a href="/sign_in_as_guest" onClick={this.signInAsGuest}>Sign In As Guest</a>
 
           </span>
 

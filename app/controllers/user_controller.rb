@@ -19,8 +19,12 @@ class UserController < ApplicationController
   end
 
   def guest
-  	@guest = User.find_by(email:"guest@guest.com")
-  	sign_in_and_redirect @guest
+  	if request.xhr?
+  		@guest = User.find_by(email:"guest@guest.com")
+  		sign_in_and_redirect @guest
+    else
+  		redirect_to root_path
+  	end
   end
 
 
