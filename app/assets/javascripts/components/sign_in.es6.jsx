@@ -52,6 +52,16 @@ class SignIn extends React.Component {
     				<a href="signup" onClick={this.props.signUp}>Not A User? Sign Up Here</a>
     			</span>
     		</div>
+
+        <div>
+
+          <span>
+
+            <a href="/sign_in_as_guest">Sign In As Guest</a>
+
+          </span>
+
+        </div>
     	</div>
     );
   }

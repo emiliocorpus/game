@@ -18,5 +18,10 @@ class UserController < ApplicationController
 
   end
 
+  def guest
+  	@guest = User.find_by(email:"guest@guest.com")
+  	sign_in_and_redirect @guest
+  end
+
 
 end

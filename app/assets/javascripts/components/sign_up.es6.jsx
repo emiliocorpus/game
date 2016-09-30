@@ -13,7 +13,7 @@ class SignUp extends React.Component {
   		url: '/users/create',
   		type: 'POST',
   		dataType: 'json',
-  		data: {email: this.refs.email.value, username: this.refs.username.value, password: this.refs.password.value, confirm_password:this.refs.confirmPassword.value},
+  		data: {email: this.refs.email.value, password: this.refs.password.value, confirm_password:this.refs.confirmPassword.value},
   	})
   	.done(function(response) {
   		debugger
@@ -70,6 +70,16 @@ class SignUp extends React.Component {
     				<a href="signin" onClick={this.props.signIn}>Already a user? Sign In Here</a>
     			</span>
     		</div>
+
+        <div>
+
+          <span>
+
+            <a href="/sign_in_as_guest">Sign In As Guest</a>
+
+          </span>
+
+        </div>
     	</div>
     )
   }
