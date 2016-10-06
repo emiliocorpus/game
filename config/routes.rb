@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root 'page#index'
-
-  get 'users/:id' => 'user#show'
-
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
+  get 'users/:id' => 'user#show', :as => 'user'
+  post 'sign_in_as_guest' => 'user#guest'
   post 'users/create' => 'user#create'
 
   # The priority is based upon order of creation: first created -> highest priority.

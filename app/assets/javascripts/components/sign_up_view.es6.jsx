@@ -1,4 +1,4 @@
-class SignUp extends React.Component {
+class SignUpView extends React.Component {
 
   constructor(props) {
     super(props);
@@ -13,7 +13,7 @@ class SignUp extends React.Component {
   		url: '/users/create',
   		type: 'POST',
   		dataType: 'json',
-  		data: {email: this.refs.email.value, username: this.refs.username.value, password: this.refs.password.value, confirm_password:this.refs.confirmPassword.value},
+  		data: {email: this.refs.email.value, password: this.refs.password.value, confirm_password:this.refs.confirmPassword.value},
   	})
   	.done(function(response) {
   		debugger
@@ -29,6 +29,23 @@ class SignUp extends React.Component {
 
   }
 
+  signInAsGuest (e) {
+    e.preventDefault
+    $.ajax({
+      url: '/sign_in_as_guest',
+      type: 'POST',
+    })
+    .done(function(response) {
+      console.log("success");
+    })
+    .fail(function() {
+      console.log("error");
+    })
+    .always(function() {
+      console.log("complete");
+    });
+  }
+
 
   render () {
     return (
@@ -36,11 +53,6 @@ class SignUp extends React.Component {
 
     		<div className="sign-in-up-container sign-up-container">
 	    		<form onSubmit={this.handleSignUp}>
-	    			<div className="form-group">
-	    			    <label htmlFor="username">username:</label>
-	    			    <input type="text" className="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username" ref="username"/>
-	    			 
-				    </div>
 
 				    <div className="form-group">
 				        <label htmlFor="emailInput">Email address</label>
@@ -64,11 +76,27 @@ class SignUp extends React.Component {
 	    		</form>
     		</div>
 
+        <div>
+
+          <a href="/users/auth/facebook">Sign Up With Facebook Here</a>
+
+        </div>
+
     		<div>
     			<span>
     				<a href="signin" onClick={this.props.signIn}>Already a user? Sign In Here</a>
     			</span>
     		</div>
+
+        <div>
+
+          <span>
+
+            <a href="/sign_in_as_guest" onClick={this.signInAsGuest} >Sign In As Guest</a>
+
+          </span>
+
+        </div>
     	</div>
     )
   }

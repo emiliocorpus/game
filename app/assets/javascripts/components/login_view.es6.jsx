@@ -1,4 +1,4 @@
-class RootPage extends React.Component {
+class LoginView extends React.Component {
 
   constructor(props) {
     super(props);
@@ -21,6 +21,7 @@ class RootPage extends React.Component {
 
   }
 
+
   signUp (e) {
   	e.preventDefault()
   	this.setState({
@@ -33,16 +34,20 @@ class RootPage extends React.Component {
 
   	switch(this.state.display) {
   	    case "signIn":
-  	        toBeDisplayed = <SignIn signUp={this.signUp}/>
+  	        toBeDisplayed = <SignInView signUp={this.signUp}/>
   	        break;
   	    case "signUp":
-	        toBeDisplayed = <SignUp signIn={this.signIn}/>
+	        toBeDisplayed = <SignUpView signIn={this.signIn}/>
   	        break;
   	    default:
   	        toBeDisplayed = <div className="body-splash">
-	  	        	    		<button> P L A Y </button>
-	  	        	    		<a href="sign_in" onClick={this.signIn}>Sign In</a>
-	  	        	    		<a href="sign_up" onClick={this.signUp}>Not A User? Sign Up Here</a>
+
+	  	        	    		<div className="sign-in-up-links-container">
+		  	        	    			<a href="sign_in" onClick={this.signIn} className="sign-in-link">Sign In</a>
+		  	        	    			<br/>
+		  	        	    			<a href="sign_up" onClick={this.signUp} className="sign-up-link">Not A User? Sign Up Here</a>
+
+	  	        	    		</div>
   	            			</div>
   	}
 

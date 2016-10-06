@@ -13,14 +13,19 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 gem 'oauth2'
 gem 'rails_12factor'
 gem "react-rails", "~> 1.8.2"
 gem 'nokogiri', '~> 1.6.7.1'
 gem 'turbolinks'
+gem 'phaser-rails'
+
 
 
 group :development, :test do
+	gem "ghost"
 	gem "rspec-rails"
 	gem "factory_girl_rails"
 	gem "capybara"
