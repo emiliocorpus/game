@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-poop', { preload: preload, create: create, update: update, render: render  });
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-game', { preload: preload, create: create, update: update, render: render  });
 
 var sprite ;
 var counter = 0 ;

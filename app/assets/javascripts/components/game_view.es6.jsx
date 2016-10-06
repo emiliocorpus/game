@@ -2,7 +2,7 @@ class GameView extends React.Component {
   render () {
     return (
     	<div className="game debugger-green">
-    		<div className="phaser-poop">
+    		<div className="phaser-game">
 
 
     		</div>
