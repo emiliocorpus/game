@@ -1,14 +1,9 @@
-
-<div class="container-fluid">
-
-	<div class="game-title-splash">
-
-		<h1>GAME TITLE HERE</h1>
-
-	</div>
-
-
-	<%= react_component('RootPage') %>
-
+<div class="game-title-splash">
+	<h1>GAME TITLE HERE</h1>
 </div>
+
+<% if !current_user %>
+	<%= react_component('LoginView') %>
+<% end %>
+
 

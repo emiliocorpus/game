@@ -1,4 +1,4 @@
-class RootPage extends React.Component {
+class LoginView extends React.Component {
 
   constructor(props) {
     super(props);
@@ -34,14 +34,14 @@ class RootPage extends React.Component {
 
   	switch(this.state.display) {
   	    case "signIn":
-  	        toBeDisplayed = <SignIn signUp={this.signUp}/>
+  	        toBeDisplayed = <SignInView signUp={this.signUp}/>
   	        break;
   	    case "signUp":
-	        toBeDisplayed = <SignUp signIn={this.signIn}/>
+	        toBeDisplayed = <SignUpView signIn={this.signIn}/>
   	        break;
   	    default:
   	        toBeDisplayed = <div className="body-splash">
-	  	        	    		<button type="submit" className="btn btn-success">P L A Y</button>
+	  	        	    		<button type="submit" className="btn btn-success" onClick={this.play}>P L A Y</button>
 
 	  	        	    		<div className="sign-in-up-links-container">
 

@@ -1,4 +1,4 @@
-class SignUp extends React.Component {
+class SignUpView extends React.Component {
 
   constructor(props) {
     super(props);

@@ -1,4 +1,4 @@
-class SignIn extends React.Component {
+class SignInView extends React.Component {
 
   handleLogIn (e) {
   	e.preventDefault()
