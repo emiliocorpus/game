@@ -13,8 +13,9 @@ class Game extends React.Component {
 	canvas.height = CANVAS_WIDTH
 	canvas.width = CANVAS_HEIGHT
 
-	var textX = 50;
-	var textY = 50;
+	var LEFT_BOUNDARY = 50
+	var RIGHT_BOUNDARY = 550
+
 	
 	setInterval(function() {
 	  update();
@@ -25,13 +26,18 @@ class Game extends React.Component {
 	draw()
 
 	function update() {
-		textX += 1;
-		textY += 1;
+		
 	}
 	function draw() { 
 		ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-		ctx.fillStyle = "#000"; // Set color to black
-		ctx.fillText("Sup Bro!", textX, textY);
+		ctx.beginPath()
+		ctx.moveTo(LEFT_BOUNDARY, 0)
+		ctx.lineTo(LEFT_BOUNDARY, CANVAS_HEIGHT)
+		ctx.stroke()
+		ctx.beginPath()
+		ctx.moveTo(RIGHT_BOUNDARY, 0)
+		ctx.lineTo(RIGHT_BOUNDARY, CANVAS_HEIGHT)
+		ctx.stroke()
 	}
 
 
