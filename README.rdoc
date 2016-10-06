@@ -1,3 +1,5 @@
-== Game
+== Skinny Chess
 
+
+1 Player Scrolling Chess Game built on Ruby on Rails and Phaser.io
 
