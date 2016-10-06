@@ -7,7 +7,7 @@ var step = Math.PI * 2 / 360 ;
 function preload() {
 
     // Load images to use as the game sprites
-    game.load.image('sprite', 'assets/sprites/phaser2.png');
+    game.load.image('sprite', 'assets/sprites/phaser.png');
 
 }
 
