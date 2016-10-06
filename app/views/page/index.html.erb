@@ -2,8 +2,10 @@
 
 <%= react_component('GameView') %>
 
-<% if !current_user %>
+<!-- <% if !current_user %>
 	<%= react_component('LoginView') %>
-<% end %>
+<% else %>
+	<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+<% end %> -->
 
 

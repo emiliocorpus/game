@@ -16,7 +16,6 @@ class SignUpView extends React.Component {
   		data: {email: this.refs.email.value, password: this.refs.password.value, confirm_password:this.refs.confirmPassword.value},
   	})
   	.done(function(response) {
-  		debugger
   		console.log("success");
   	})
   	.fail(function() {
