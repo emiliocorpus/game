@@ -41,10 +41,8 @@ class LoginView extends React.Component {
   	        break;
   	    default:
   	        toBeDisplayed = <div className="body-splash">
-	  	        	    		<button type="submit" className="btn btn-success" onClick={this.play}>P L A Y</button>
 
 	  	        	    		<div className="sign-in-up-links-container">
-
 		  	        	    			<a href="sign_in" onClick={this.signIn} className="sign-in-link">Sign In</a>
 		  	        	    			<br/>
 		  	        	    			<a href="sign_up" onClick={this.signUp} className="sign-up-link">Not A User? Sign Up Here</a>

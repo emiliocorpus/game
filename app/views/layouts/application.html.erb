@@ -9,9 +9,7 @@
 </head>
 <body>
 
-	<div class="container-fluid">
 		<%= yield %>
-	</div>
 
 
 	<%= link_to "View mobile site", url_for(:mobile_site => 1) if mobile_browser? %>
