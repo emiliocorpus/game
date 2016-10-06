@@ -7,7 +7,6 @@
 
 
 div.game {
-	height:800px;
 	width:100%;
 	margin:0 auto;
 	text-align:center;
@@ -15,8 +14,9 @@ div.game {
 
 
 
-.canvas {
+canvas {
 	margin: 0 auto;
+	border:2px solid red;
 }
 
 
