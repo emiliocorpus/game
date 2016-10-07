@@ -8,10 +8,14 @@ function preload() {
 
     // Load images to use as the game sprites
     game.load.image('sprite', 'assets/sprites/phaser.png');
+    game.load.image('menubackground', 'assets/backgrounds/menubackground.png')
 
 }
 
 function create() {
+
+    // background image
+    background = game.add.tileSprite(0, 0, 400, 800, "menubackground");
 
     // Create sprite and put it in the middle of the stage
     sprite = game.add.sprite(0, 0, 'sprite');
