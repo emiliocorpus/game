@@ -19,10 +19,10 @@ function create() {
 
     // Create sprite and put it in the middle of the stage
     sprite = game.add.sprite(0, 0, 'sprite');
-    sprite.alpha = 0.5 ;
-    sprite.x = game.width / 2 ;
-    sprite.anchor.x = sprite.anchor.y = 0.5 ;
-    sprite.inputEnabled = true ;
+    // sprite.alpha = 0.5 ;
+    // sprite.x = game.width / 2 ;
+    // sprite.anchor.x = sprite.anchor.y = 0.5 ;
+    // sprite.inputEnabled = true ;
 }
 
 function update()
