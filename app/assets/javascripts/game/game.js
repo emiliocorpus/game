@@ -20,8 +20,8 @@ function create() {
     // Create sprite and put it in the middle of the stage
     sprite = game.add.sprite(0, 0, 'sprite');
     // sprite.alpha = 0.5 ;
-    // sprite.x = game.width / 2 ;
-    // sprite.anchor.x = sprite.anchor.y = 0.5 ;
+    sprite.x = game.width / 2 ;
+    sprite.anchor.x = sprite.anchor.y = 0.5 ;
     // sprite.inputEnabled = true ;
 }
 
@@ -37,8 +37,8 @@ function update()
 function render() {
 
     // Input debug info
-    game.debug.inputInfo(32, 32);
-    game.debug.spriteInputInfo(sprite, 32, 130);
-    game.debug.pointer( game.input.activePointer );
+    // game.debug.inputInfo(32, 32);
+    // game.debug.spriteInputInfo(sprite, 32, 130);
+    // game.debug.pointer( game.input.activePointer );
 
 }
