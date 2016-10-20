@@ -29,6 +29,7 @@ group :development, :test do
 	gem "rspec-rails"
 	gem "factory_girl_rails"
 	gem "capybara"
+	gem 'jasmine'
 	gem "guard-rspec"
 	gem 'httparty'
 	gem 'binding_of_caller'
