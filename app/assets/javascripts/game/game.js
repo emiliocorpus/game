@@ -1,4 +1,4 @@
-var game = new Phaser.Game(400, 800, Phaser.CANVAS, 'phaser-game', { preload: preload, create: create, update: update, render: render  });
+var game = new Phaser.Game(1000, 600, Phaser.CANVAS, 'phaser-game', { preload: preload, create: create, update: update, render: render  });
 
 var sprite ;
 var counter = 0 ;
@@ -15,7 +15,7 @@ function preload() {
 function create() {
 
     // background image
-    background = game.add.tileSprite(0, 0, 400, 800, "menubackground");
+    background = game.add.tileSprite(0, 0, 1000, 600, "menubackground");
 
     // Create sprite and put it in the middle of the stage
     sprite = game.add.sprite(0, 0, 'sprite');
